@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  gptservice:
+    build: .
+    ports:
+      - "5500:5500"
+    env_file:
+      - .env
+    restart: unless-stopped
